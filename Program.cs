@@ -4,13 +4,11 @@
 //782 -> 8
 //918 -> 1
 
-int ReadInt (string message)
+int ReadInt(string message) // Ввод переменных
 {
-    System.Console.Write(message);
-    string value = Console.ReadLine();
-    int result = result.Parse(value);
-    return result;
-
+    System.Console.WriteLine(message);// Получаем данные из Строки
+    string value = Console.ReadLine();// Вызов консольного ввода
+    return int.Parse(value);// Возвращает переменную в int
 }
 
 int number = ReadInt("Введите трехзначное число :");
@@ -20,3 +18,5 @@ if (number<100 || number >1000)
     return;
 }
 Console.WriteLine($"Введенное число '{number}'");
+int secondRank=number / 10 % 10;
+Console.WriteLine($"Вторая цифра '{secondRank}'");
